@@ -1,6 +1,8 @@
+/**
+ * Enumeration for the players move
+ */
 
-public enum Player // Players enum
+public enum Player 
 {
-	One,
-	Two
+	Empty, Cross, Nought
 }

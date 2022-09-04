@@ -49,7 +49,7 @@ public class GameMain extends JPanel implements MouseListener
 		statusBar.setFont(new Font(Font.DIALOG_INPUT, Font.BOLD, 14));       
 		statusBar.setBorder(BorderFactory.createEmptyBorder(2, 5, 4, 5));       
 		statusBar.setOpaque(true);       
-		statusBar.setBackground(Color.LIGHT_GRAY);  
+		statusBar.setBackground(Color.LIGHT_GRAY);
 
 		//layout of the panel is in border layout
 		setLayout(new BorderLayout());       
@@ -74,6 +74,7 @@ public class GameMain extends JPanel implements MouseListener
 			{
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
+				new GameMain();
 
 				//TODO: create the new GameMain panel and add it to the frame
 
@@ -105,14 +106,15 @@ public class GameMain extends JPanel implements MouseListener
 			{   
 
 				//TODO: use the status bar to display the message "X"'s Turn
-
+				statusBar.setForeground(Color.RED);
+				statusBar.setText("X 's Turn");
 
 			}
 			else 
 			{    
-
 				//TODO: use the status bar to display the message "O"'s Turn
-
+				statusBar.setForeground(Color.BLUE);
+				statusBar.setText("O 's Turn");
 			}       
 		} 
 		else if (currentState == GameState.Draw) 

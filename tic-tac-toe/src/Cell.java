@@ -15,11 +15,13 @@ public class Cell
 	{
 
 		// TODO: Initialise the variables row, col 
-
-
-
+		row = GameMain.CANVAS_WIDTH / GameMain.ROWS;
+		col = GameMain.CANVAS_HEIGHT / GameMain.COLS;
 		//TODO: call the method that sets the cell content to EMPTY
-
+		if (content == Player.Empty)
+		{			
+			clear(null);
+		}
 	}
 
 
@@ -49,11 +51,16 @@ public class Cell
 	}
 
 	/** Set this cell's content to EMPTY */
-	public void clear() 
+	public void clear(Graphics2D g) 
 	{
-
 		// TODO: Set the value of content to Empty (Remember this is an enum)
-		//Player.Empty??
+		content = Player.Empty;
+		Graphics2D graphics2D = (Graphics2D) g;
+		int x1 = col * GameMain.CELL_SIZE + GameMain.CELL_PADDING;
+		int y1 = row * GameMain.CELL_SIZE + GameMain.CELL_PADDING;
+		int x2 = (col + 1) * GameMain.CELL_SIZE - GameMain.CELL_PADDING;
+		int y2 = (row + 1) * GameMain.CELL_SIZE - GameMain.CELL_PADDING;
+		graphics2D.clearRect(x1, y1, x2, y2);
 
 	}
 

@@ -79,8 +79,8 @@ public class GameMain extends JPanel implements MouseListener
 				//TODO: create the new GameMain panel and add it to the frame
 				frame.setTitle(TITLE);
 				frame.setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
-				frame.setResizable(true);
-				frame.setVisible(false);
+				frame.setResizable(false);
+				frame.setVisible(true);
 				frame.add(new GameMain());
 
 

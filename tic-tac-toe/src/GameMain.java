@@ -63,7 +63,7 @@ public class GameMain extends JPanel implements MouseListener
 
 
 		//TODO: call the method to initialise the game board
-		//board.isDraw();
+		board.isDraw();
 	}
 
 	public static void main(String[] args) 
@@ -80,7 +80,7 @@ public class GameMain extends JPanel implements MouseListener
 				frame.setTitle(TITLE);
 				frame.setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 				frame.setResizable(true);
-				frame.setVisible(true);
+				frame.setVisible(false);
 				frame.add(new GameMain());
 
 

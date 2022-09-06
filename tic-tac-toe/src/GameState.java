@@ -1,4 +1,7 @@
-
+/*
+ *  Created GameState enum based on variables in the code
+ * 
+ */
 public enum GameState 
 {
 	Playing,

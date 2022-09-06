@@ -20,7 +20,7 @@ public class Board
 		{
 			for (int col = 0; col < GameMain.COLS; ++col) 
 			{
-				cells[row][col] = new Cell(row, col);
+				cells[row][col] = new Cell(row, col); //loop that goes through GameMain.Rows && GameMain.COLS to set the cells array
 			}
 		}
 	}
@@ -34,15 +34,14 @@ public class Board
 		{
 			for (int cols = 0; cols < GameMain.COLS; cols++)
 			{
-				if (cells[rows][cols].content == Player.Empty)
+				if (cells[rows][cols].content == Player.Empty) // checking if any of the cells are left empty
 				{
 					return false;
 				}
 			}
 		}
 		return true;				
-		// Hint: Use a nested loop (see the constructor for an example). Check whether any of the cells content in the board grid are Player.Empty. If they are, it is not a draw.
-		// Hint: Return false if it is not a draw, return true if there are no empty positions left
+		//returns true if there are no empty positions left
 	}
 
 	/*

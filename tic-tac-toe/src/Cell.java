@@ -17,7 +17,7 @@ public class Cell
 		this.row = row;
 		this.col = col;
 		//call the method that sets the cell content to EMPTY			
-		clear(null);
+		clear(null); //calling the clear method the sets cell contents to EMPTY
 	}
 
 
@@ -49,7 +49,7 @@ public class Cell
 	/** Set this cell's content to EMPTY */
 	public void clear(Graphics2D g) 
 	{
-		// Set the value of content to Empty (Remember this is an enum)
+		// Sets the value of content to Empty (Remember this is an enum)
 		this.content = Player.Empty;
 	}
 

@@ -13,8 +13,7 @@ public class Board
 	/** Constructor to create the game board */
 	public Board() 
 	{
-
-		//TODO: initialise the cells array using ROWS and COLS constants 
+		//initialise the cells array using ROWS and COLS constants 
 		cells = new Cell[GameMain.ROWS][GameMain.COLS];
 
 		for (int row = 0; row < GameMain.ROWS; ++row) 
@@ -30,20 +29,20 @@ public class Board
 	/** Return true if it is a draw (i.e., no more EMPTY cells) */ 
 	public boolean isDraw() 
 	{
-		// TODO: Check whether the game has ended in a draw.
+		//Check whether the game has ended in a draw.
 		for (int rows = 0; rows < GameMain.ROWS; rows++)
 		{
 			for (int cols = 0; cols < GameMain.COLS; cols++)
 			{
-				if (cells[rows][cols].content != Player.Empty)
+				if (cells[rows][cols].content == Player.Empty)
 				{
 					return false;
-				}	
+				}
 			}
 		}
+		return true;				
 		// Hint: Use a nested loop (see the constructor for an example). Check whether any of the cells content in the board grid are Player.Empty. If they are, it is not a draw.
 		// Hint: Return false if it is not a draw, return true if there are no empty positions left
-		return true;
 	}
 
 	/*
@@ -65,7 +64,7 @@ public class Board
 			return true;
 
 		//Check the diagonal in the other direction
-		if ( cells[2][0].content == thePlayer && cells[1][1].content == thePlayer && cells[0][2].content == thePlayer)
+		if ( cells[0][2].content == thePlayer && cells[1][1].content == thePlayer && cells[2][0].content == thePlayer)
 			return true;
 
 		else
